@@ -1,0 +1,45 @@
+% NeurIPS 2026 Style File (Approximate)
+% Based on previous years' style files
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2026}[2026/01/01 NeurIPS 2026 paper style]
+
+\RequirePackage{geometry}
+\RequirePackage{natbib}
+
+% Page Layout
+\geometry{
+  letterpaper,
+  left=1.5in,
+  right=1.5in,
+  top=1.0in,
+  bottom=1.0in
+}
+
+% Fonts
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+
+% Bibliography style
+\bibliographystyle{plainnat}
+
+% Options
+\DeclareOption{preprint}{
+  \geometry{
+    left=1.25in,
+    right=1.25in,
+    top=1.0in,
+    bottom=1.0in
+  }
+}
+\DeclareOption{final}{
+  \geometry{
+    left=1.0in,
+    right=1.0in,
+    top=1.0in,
+    bottom=1.0in
+  }
+}
+\ProcessOptions\relax
+
+\endinput
